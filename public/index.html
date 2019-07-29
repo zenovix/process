@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Planning Schdule</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="form-input">
+        <form class="form-inline" style="margin-bottom: 0">
+            <a class="navbar-brand" href="#">
+                <img src="./image/logo.png" alt="logo" class="nav-img">
+            </a>
+            <label for="Start">Start Date</label>
+            <input type="text" class="form-control" id="s_date" style="width:10%" value="10-Feb-2019" disabled>
+            <label for="time">End Date</label>
+            <input type="text" class="form-control" id="e_date" style="width:10%" value="10-Jun-2019" disabled>
+            <label for="pwd">Project Name</label>
+            <input type="text" class="form-control" id="p_name" style="width:10%" value="MAXI" disabled>
+            <label for="pwd">Current Date</label>
+            <input type="text" class="form-control" id="time">
+        </form>
+    </section>
+    <section class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Mechanical Design & Review		
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">10-Feb</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">15</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc3912;color:white" class="r_days">20</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart1"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Electrical design & Review	
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">10-Feb</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">12</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart2"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Mechanical Order	
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">25-Feb</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">60</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">70</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart3"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Electrical Order
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">20-Feb</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">60</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">65</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart4"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Mechanical Assembly
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">26-Apr</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">11</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart5"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Electrical Assembly
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">21-Apr</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">12</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart6"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">PLC Programming
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">21-Mar</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">54</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc9e12;color:white" class="r_days">57</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart7"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Total Assembly
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">1-May</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc3912;color:white" class="r_days">15</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart8"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Testing
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">11-May</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc3912;color:white" class="r_days">14</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart9"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">Internal FAT
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">15-May</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">10</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #dc3912;color:white" class="r_days">14</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart10"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">FAT
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">2-Jun</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">2</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span style="background-color: #4caf50;color:white" class="r_days">2</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart11"></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-2">
+                    <div class="card" style="border: 2px solid #94adde;">
+                        <h5 class="card-title chart-heading">FAT Review
+                        </h5>
+                        <div class="row" style="padding-left:10px;">
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Start</span><br><span class="r_days_2">13-Jun</span><br><span
+                                        class="days_h">Date</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Target </span><br><span class="r_days">5</span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="days_r">
+                                    <span class="days_h_1" style="line-height: 1.8;">Actual</span><br><span class="r_days"></span><br><span
+                                        class="days_h">Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="text-center">
+                            <i class="fa fa-circle" aria-hidden="true" style="font-size:10px;color:#dc3912"></i><span
+                                class="chart-legand">Stop</span>
+                            <i class="fa fa-circle" aria-hidden="true"
+                                style="font-size:10px;color:#3366cc;padding-left: 10%"></i><span
+                                class="chart-legand">Run</span>
+                        </div> -->
+                        <div class="chart_div" id="piechart12"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>
